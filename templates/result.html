@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparison Results</h1>
+
+        <div class="section">
+            <h2>Missing Points</h2>
+            {% if missing_points %}
+                <ul>
+                    {% for point in missing_points %}
+                        <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No missing points found.</p>
+            {% endif %}
+        </div>
+
+        <div class="section">
+            <h2>Additional Points</h2>
+            {% if additional_points %}
+                <ul>
+                    {% for point in additional_points %}
+                        <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No additional points found.</p>
+            {% endif %}
+        </div>
+
+        <div class="section">
+            <h2>Suggestions</h2>
+            {% if gpt_neo_suggestions %}
+                <p>{{ gpt_neo_suggestions }}</p>
+            {% else %}
+                <p>No suggestions available.</p>
+            {% endif %}
+        </div>
+
+        <a href="/" class="back-button">Back to Upload</a>
+    </div>
+</body>
+</html>

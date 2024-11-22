@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Document for Comparison</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="user_file">Upload User Document (PDF):</label>
+            <input type="file" name="user_file" id="user_file" accept=".pdf" required>
+
+            <button type="submit">Compare Document</button>
+        </form>
+    </div>
+</body>
+</html>
